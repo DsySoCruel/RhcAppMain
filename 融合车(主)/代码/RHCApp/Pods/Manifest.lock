@@ -1,0 +1,111 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - IQKeyboardManager (4.0.13)
+  - JSONModel (1.7.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
+  - SDCycleScrollView (1.74):
+    - SDWebImage
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - "AFNetworking (from `git@e.coding.net:zhongke/AFNetworking.git`)"
+  - IQKeyboardManager (~> 4.0.8)
+  - "JSONModel (from `git@e.coding.net:zhongke/JSONModel.git`)"
+  - "Masonry (from `git@e.coding.net:zhongke/Masonry.git`)"
+  - "MBProgressHUD (from `git@e.coding.net:zhongke/MBProgressHUD.git`)"
+  - MJExtension (~> 3.0.13)
+  - "MJRefresh (from `git@e.coding.net:zhongke/MJRefresh.git`)"
+  - "SDCycleScrollView (from `git@e.coding.net:zhongke/SDCycleScrollView.git`)"
+  - "SDWebImage (from `git@e.coding.net:zhongke/SDWebImage.git`)"
+  - "UITableView+FDTemplateLayoutCell"
+  - "YYKit (from `git@e.coding.net:zhongke/YYKit.git`)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManager
+    - MJExtension
+    - "UITableView+FDTemplateLayoutCell"
+
+EXTERNAL SOURCES:
+  AFNetworking:
+    :git: "git@e.coding.net:zhongke/AFNetworking.git"
+  JSONModel:
+    :git: "git@e.coding.net:zhongke/JSONModel.git"
+  Masonry:
+    :git: "git@e.coding.net:zhongke/Masonry.git"
+  MBProgressHUD:
+    :git: "git@e.coding.net:zhongke/MBProgressHUD.git"
+  MJRefresh:
+    :git: "git@e.coding.net:zhongke/MJRefresh.git"
+  SDCycleScrollView:
+    :git: "git@e.coding.net:zhongke/SDCycleScrollView.git"
+  SDWebImage:
+    :git: "git@e.coding.net:zhongke/SDWebImage.git"
+  YYKit:
+    :git: "git@e.coding.net:zhongke/YYKit.git"
+
+CHECKOUT OPTIONS:
+  AFNetworking:
+    :commit: dd59ffa188f2685a3e8aa4ef096511652aebbb7e
+    :git: "git@e.coding.net:zhongke/AFNetworking.git"
+  JSONModel:
+    :commit: 9ecd4f718d61bb13b7d301aeaa6c50d3462404a2
+    :git: "git@e.coding.net:zhongke/JSONModel.git"
+  Masonry:
+    :commit: 8bd77ea92bbe995e14c454f821200b222e5a8804
+    :git: "git@e.coding.net:zhongke/Masonry.git"
+  MBProgressHUD:
+    :commit: ddd6a2150212d0f41b264616d82577116562814f
+    :git: "git@e.coding.net:zhongke/MBProgressHUD.git"
+  MJRefresh:
+    :commit: a689ae5e92c30a71389a5eee725bba4fb952f8c1
+    :git: "git@e.coding.net:zhongke/MJRefresh.git"
+  SDCycleScrollView:
+    :commit: f9b7466580347785eab50a56e68b09ef875f0d60
+    :git: "git@e.coding.net:zhongke/SDCycleScrollView.git"
+  SDWebImage:
+    :commit: b05959dbcbb9ff34f4356dcec3af8642ddc0dd87
+    :git: "git@e.coding.net:zhongke/SDWebImage.git"
+  YYKit:
+    :commit: 4e1bd1cfcdb3331244b219cbd37cc9b1ccb62b7a
+    :git: "git@e.coding.net:zhongke/YYKit.git"
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDCycleScrollView: 1cbd90ce750b4b73c493bbceaae0499e419f1f94
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: d73e5177715da697ddfa316a2abe22bf4f0f0159
+
+COCOAPODS: 1.5.3

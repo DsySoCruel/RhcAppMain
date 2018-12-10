@@ -1,0 +1,224 @@
+//
+//  PrefixHeader.pch
+//  RHCApp
+//
+//  Created by daishaoyang on 2018/6/20.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "UIImage+YXDImage.h"
+#import "UIView+Frame.h"
+#import <JSONModel.h>
+#import <UITableView+FDTemplateLayoutCell.h>
+////#import "RCMNavigationController.h"
+////#import "RCMLoginViewController.h"
+////#import "RCMButton.h"
+////#import "RCMViewController.h"
+#import <MBProgressHUD.h>
+#import "MBHUDHelper.h"
+//#import "YXDURL.h"
+#import "NSString+Extension.h"
+#import "NSString+Data.h"
+#import "UIView+Frame.h"
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/SDWebImageManager.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import <Masonry.h>
+#import <IQKeyboardManager.h>
+#import "NSObject+Property.h"
+
+//
+////#import "RCMUserInfoModel.h"
+////#import "RCMUserInfoStore.h"
+////#import "YYCategories.h"
+////#import "QiniuSDK.h"
+////#import "QiniuImageUtils.h"
+#import "NSDate+Extension.h"
+#import "NSCalendar+Extension.h"
+////#import "AppDelegate.h"
+#import "UIBarButtonItem+Extension.h"
+//#import "GetCoordinateTool.h"
+//#import "WeiZhiManager.h"
+#import "RefreshFooterView.h"
+#import "UIButton+ImagePositionAndHitArea.h"
+
+
+//自己共用类
+//#import "ShopController.h"
+#import "YXDUserInfoModel.h"
+#import "YXDUserInfoStore.h"
+#import "YXDNavigationController.h"
+#import "BaseViewController.h"
+#import "YXDButton.h"
+#import "RHCURL.h"
+#import "NetWorkManager.h"
+#import "BaseModel.h"
+#import "LoginViewController.h"
+#import "ProductModel.h"
+#import "WebViewController.h"
+
+//CG_INLINE CGRect
+//
+//RcmCGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
+//{
+//    AppDelegate *myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    CGRect rect;
+//    rect.origin.x = x * myDelegate.autoSizeScaleX;
+//    rect.origin.y = y * myDelegate.autoSizeScaleY;
+//    rect.size.width = width * myDelegate.autoSizeScaleX;
+//    rect.size.height = height * myDelegate.autoSizeScaleY;
+//
+//    NSLog(@"%f   %f " , myDelegate.autoSizeScaleX , myDelegate.autoSizeScaleY);
+//    return rect;
+//}
+//
+//CG_INLINE CGSize
+//
+//RcmCGSizeMake (CGFloat width, CGFloat height)
+//{
+//    AppDelegate *theDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+//    CGSize rects;
+//    rects.width = width * theDelegate.autoSizeScaleX;
+//    rects.height = height * theDelegate.autoSizeScaleY;
+//
+//    return rects;
+//
+//}
+#endif
+
+#endif
+
+
+//写请求数据到桌面
+#define RCMAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/daishaoyang/Desktop/%@.plist", @#filename] atomically:YES];
+
+
+/**************************************颜色处理*******************************************/
+//1.RGB颜色
+#define YXDColor(r,g,b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1]
+#define YXDBlockColor(r,g,b,t) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:(t)]
+
+//2.灰色
+#define YXDGrayColor(v) YXDColor(v,v,v)
+//3.随机色
+#define YXDRandomColor YXDColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+//4.16进制色值
+#define RGB_COLOR(_STR_) ([UIColor colorWithRed:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(1, 2)] UTF8String], 0, 16)] intValue] / 255.0 green:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(3, 2)] UTF8String], 0, 16)] intValue] / 255.0 blue:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(5, 2)] UTF8String], 0, 16)] intValue] / 255.0 alpha:1.0])
+
+#define RGB(colorRgb)  [UIColor colorWithRed:((colorRgb & 0xFF0000) >> 16)/255.0 green:((colorRgb & 0xFF00) >> 8)/255.0 blue:((colorRgb & 0xFF)/255.0) alpha:1]
+
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define RGBA(colorRgb,__a)  [UIColor colorWithRed:((colorRgb & 0xFF0000) >> 16)/255.0 green:((colorRgb & 0xFF00) >> 8)/255.0 blue:((colorRgb & 0xFF)/255.0) alpha:__a]
+
+#define SMTextColor     RGB(0x000000) //主文本（黑）
+#define SMParatextColor RGB(0x808080) //副文本（灰）
+#define SMViewBGColor   RGB(0xf5f5f5) //页面背景色（灰）
+#define SMLineColor     RGB(0xe5e5e5) //横线颜色（灰）
+#define SMButtonBGColor RGB(0xffc000) //按钮背景颜色（黄）
+#define SMThemeColor    [UIColor orangeColor] //主题色(绿宝石)
+
+#define TempToken @"d613cd2f42e9a637c4597c0402b228f669186d0bbc03822515d3ae56babdac27"
+
+//规划常规颜色值几种
+
+
+//按钮置灰
+#define UNAble_color YXDGrayColor(180)//按钮不可用颜色
+
+/******************************************屏幕适配**********************************************************/
+
+// 大字体
+#define YXDBigFont [UIFont systemFontOfSize:15]
+
+// 中字体
+#define YXDmiddleFont [UIFont systemFontOfSize:13]
+
+// 小字体
+#define YXDSmallFont [UIFont systemFontOfSize:11]
+
+/***********常用代码*************/
+#define SFONT(X)         [UIFont systemFontOfSize:X]
+#define BFONT(X)         [UIFont boldSystemFontOfSize:X]
+//这个是9.0以后自带的平方字体
+#define PFFONT(X)         [UIFont fontWithName:@"PingFangSC-Regular" size:X]
+#define MFFONT(X)         [UIFont fontWithName:@"PingFangSC-Medium" size:X]
+#define LPFFONT(X)         [UIFont fontWithName:@"PingFangSC-Light" size:X]
+#define BPFFONT(X)         [UIFont fontWithName:@"PingFangSC-Semibold" size:X]
+
+#define IMAGECACHE(name)  [UIImage imageNamed:name]
+#define UserDefaults [NSUserDefaults standardUserDefaults]
+#define WeakObj(obj) __weak typeof(obj) Weak##obj = obj;
+#define StrongObj(obj) __strong typeof(obj) strong##obj = obj;
+#define stringIsNilToEmpty(obj) (!obj ? @"":obj)
+#define WEAK_SELF @weakify(self);
+#define STRONG_SELF @strongify(self); if(!self) {return;};
+#define URLWithImageName(X) [NSURL URLWithString:(X)]
+
+//个人accessToken值
+#define UserAccessToken [UserDefaults valueForKey:@"accessToken"]
+
+/***********屏幕适配*************/
+#define YXDScreenW [UIScreen mainScreen].bounds.size.width
+#define YXDScreenH [UIScreen mainScreen].bounds.size.height
+#define Screen_H   (YXDScreenH > YXDScreenW? YXDScreenH: YXDScreenW)
+#define Screen_W   (YXDScreenH > YXDScreenW? YXDScreenW: YXDScreenH)
+#define iphone6P   (RCMScreenH == 736)
+#define iphone6    (RCMScreenH == 667)
+#define iphone5    (RCMScreenH == 568)
+#define iphone4    (RCMScreenH == 480)
+
+
+// iPhone X
+#define  SM_iPhoneX (YXDScreenW == 375.f && YXDScreenH == 812.f ? YES : NO)
+// Tabbar safe bottom margin.
+#define  SM_TabbarSafeBottomMargin         (SM_iPhoneX ? 34.f : 0.f)
+#define SM_ViewSafeAreInsets(view) ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = view.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
+
+#define StatusBar_H     (SM_iPhoneX ? 44.f : 20.f)
+#define NAVI_H          (SM_iPhoneX ? 88.f : 64.f)
+#define TAB_H           (SM_iPhoneX ? (49.f+34.f) : 49.f)
+#define SafeTopSpace    (SM_iPhoneX ? 24.f : 0.f)
+#define SafeBottomSpace (SM_iPhoneX ? 34.f : 0.f)
+#define SEARCHBAR_HEIGHT     (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"11.0") ? 52.0f : 44.0f)
+
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+
+//系统版本号
+#define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0f)
+
+
+
+/***********代码功能*************/
+#define RMFunc RCMLog(@"%s",__func__)
+
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+#ifdef DEBUG // 调试
+
+#define YXDLog(...) NSLog(__VA_ARGS__);
+
+#else // 发布
+
+#define RCMLog(...)
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+inhibit_all_warnings!
+target ‘RHCApp’ do
+pod 'AFNetworking', :git => 'git@e.coding.net:zhongke/AFNetworking.git'
+pod 'MJRefresh', :git => 'git@e.coding.net:zhongke/MJRefresh.git'
+pod 'SDWebImage', :git => 'git@e.coding.net:zhongke/SDWebImage.git'
+pod 'IQKeyboardManager', '~> 4.0.8'
+pod 'MBProgressHUD', :git => 'git@e.coding.net:zhongke/MBProgressHUD.git'
+pod 'MJExtension', '~> 3.0.13'
+pod 'Masonry' , :git => 'git@e.coding.net:zhongke/Masonry.git'
+pod 'SDCycleScrollView', :git => 'git@e.coding.net:zhongke/SDCycleScrollView.git'
+pod 'YYKit', :git => 'git@e.coding.net:zhongke/YYKit.git'
+pod 'JSONModel' , :git => 'git@e.coding.net:zhongke/JSONModel.git'
+pod 'UITableView+FDTemplateLayoutCell'
+end
